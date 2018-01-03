@@ -1,0 +1,104 @@
+body{
+	margin:0;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+html{
+	height: 100%;
+}
+
+.google-header{
+	justify-content: flex-end;
+	text-align: right;
+	flex-direction: row;
+	margin-top: 20px;
+}
+
+ul.links{
+	margin: 0; /* Обнуляем значение отступов */
+    padding: 4px; /* Значение полей */
+}
+ul.links li{
+	display: inline;
+	margin-right: 25px;
+	padding: 2px;
+	list-style-type: none;
+}
+a{
+	color: black;
+	text-decoration: none; 
+}
+a:hover{
+	color: grey;
+	text-decoration: underline;
+}
+.google-body{
+	flex-direction: column;
+	flex-grow: 1;
+	text-align: center;
+	justify-content: center;
+	margin-top: 150px;
+}
+
+.google-body-logo{
+	font-size: 100px;
+	 letter-spacing: 4px;
+	 font-family: sans-serif;
+}
+.G, .g{
+	color: blue;
+}
+.o, .e{
+	color: red;
+}
+.o2{
+	color: orange;
+}
+.l{
+	color: green;
+}
+
+input{
+	margin-top:30px;
+	height: 35px;
+	width: 500px;
+	border:1px;
+	box-shadow: 5px 3px 20px grey;
+}
+
+.google-body-buttons{
+	margin-top: 40px;
+	letter-spacing: 3px;
+}
+
+button{
+  	 background: -moz-linear-gradient(#D0ECF4, #5BC9E1, #D0ECF4);
+  	 height: 37px;
+  	 width: 130px;
+  	 margin-left: 8px;
+ }
+
+ .google-body-info{
+ 	margin-top: 20px;
+ }
+
+ .google-footer{
+ 	height: 60px;
+ 	background-color: #CBCBCB;
+ 	margin-top: 190px;
+ }
+
+ ul.links-footer{
+	margin: 0; /* Обнуляем значение отступов */
+    padding: 4px; /* Значение полей */
+}
+ul.links-footer li{
+	display: inline;
+
+	margin-right: 25px;
+	padding: 2px;
+	list-style-type: none;
+}
+

@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="style.css">
+  <title>Google</title>
+
+ </head>
+ <body> 
+<script>
+
+
+
+function tag( name, attributes ) {
+var el = document.createElement( name );
+
+if ( typeof attributes == 'object' ) {
+for ( var i in attributes ) {
+el.setAttribute( i, attributes[i] );
+
+
+if ( i.toLowerCase() == 'class' ) {
+el.className = attributes[i]; 
+
+}
+}
+}
+
+for ( var i = 2;i < arguments.length; i++ ) {
+var val = arguments[i];
+if ( typeof val == 'string' ) { val = document.createTextNode( val ) };
+el.appendChild( val );
+}
+return el;
+}
+
+
+var div = tag( "div", { class: "google-page"}, 
+
+  tag("div", {class: "google-header"},
+    tag ("ul",{class: "links"},
+      tag("li",{},
+        tag("a",{href:"#"},"Почта"),),
+      tag("li",{},
+        tag("a",{href:"#"},"Картинки"),),),),
+
+  tag( 'div', {class: "google-body" },
+    tag( 'div', {class: "google-body-logo" },
+    tag ('span',{class:"G"}, "G"),
+    tag ('span',{class:"o"}, "o"),
+    tag ('span',{class:"o2"}, "o"),
+    tag ('span',{class:"g"}, "g"),
+    tag ('span',{class:"l"}, "l"),
+    tag ('span',{class:"e"}, "e"), ),
+
+  tag( 'div', {class: "google-body-input" },
+    tag( 'input', {type: "text"},),),
+  tag( 'div', {class: "google-body-buttons" },
+    tag( 'button',{}, "Поиск в Google"),
+    tag( 'button',{}, "Мне повезет!"),),
+
+  tag( 'div', {class: "google-body-info" },
+    tag( 'span',{}, "Сервисы Google доступны на разных языках:"),
+    tag( 'a', {href: "https://google.com.ua"}, "українська"),),),
+
+  tag( 'div', {class: "google-footer" },
+     tag ("ul",{class: "links-footer"},
+      tag("li",{},
+        tag("a",{href:"#"},"Реклама"),),
+      tag("li",{},
+        tag("a",{href:"#"},"Для бизнеса"),),
+      tag("li",{},
+        tag("a",{href:"#"},"Все о Google"),),),),);
+
+
+
+
+document.body.appendChild(div)
+</script>
+
+
+
+ </body>
+</html>
